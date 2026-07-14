@@ -55,7 +55,7 @@ def view():
         + "-01"
     )
 
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(12, 4))
 
     cores = {
         "NORTE": "#78BE20",
@@ -84,6 +84,14 @@ def view():
             linewidth=2.5,
             color=cor,
             label=ger
+        )
+
+        ax.fill_between(
+            dados["DATA"],
+            dados["TOTAL"],
+            0,
+            color=cor,
+            alpha=0.08
         )
 
         for _, row in dados.iterrows():
@@ -119,6 +127,15 @@ def view():
         linestyle="--",
         alpha=0.3
     )
+
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    
+    ax.margins(
+        x=0.02,
+        y=0.10
+    )
+
 
     ax.legend()
 
