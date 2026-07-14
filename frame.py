@@ -47,7 +47,7 @@ st.dataframe(
 st.markdown(
     """
     <h6 style='text-align: center; color: gray;'>
-        Disponível até 14/07/2026
+        Disponível até 17/07/2026
     </h6>
     """,
     unsafe_allow_html=True
