@@ -18,6 +18,8 @@ with col2:
 df = select2()
 df2 = select3()
 
+st.divider()
+
 st.subheader("Detalhamento por Unidade")
 
 utep = st.selectbox(
