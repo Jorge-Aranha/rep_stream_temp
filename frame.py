@@ -1,15 +1,18 @@
 import streamlit as st
-import pandas as pd
-import pydeck as pdk
 from analise import view, select2, select3
 
-df = select2()
-fig_mat = view()
-df2 = select3()
+st.set_page_config(
+    page_title="Report Embargos",
+    layout="wide"
+)
 
 st.title("Report Embargos")
 
-st.pyplot(fig_mat)
+fig = view()
+st.pyplot(fig)
+
+df = select2()
+df2 = select3()
 
 st.subheader("Detalhamento por Unidade")
 
@@ -37,11 +40,9 @@ st.dataframe(
     use_container_width=True
 )
 
-st.markdown(
-    """
-    <h6 style='text-align: center; color: gray;'>
-        Disponível até 14/07/2026
-    </h6>
-    """,
-    unsafe_allow_html=True
+st.subheader("Coordenadas")
+
+st.dataframe(
+    df2,
+    use_container_width=True
 )
