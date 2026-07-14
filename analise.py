@@ -120,9 +120,11 @@ def view():
         alpha=0.3
     )
 
-    ax.legend()
+ax.legend()
 
-    plt.xticks(rotation=45)
-    plt.tight_layout()
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+return fig
 
     return fig
