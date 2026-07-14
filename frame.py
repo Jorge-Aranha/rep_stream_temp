@@ -9,7 +9,11 @@ st.set_page_config(
 st.title("Report Embargos")
 
 fig = view()
-st.pyplot(fig, use_container_width=False)
+
+col1, col2, col3 = st.columns([1, 5, 1])
+
+with col2:
+    st.pyplot(fig)
 
 df = select2()
 df2 = select3()
@@ -39,6 +43,7 @@ st.dataframe(
     df,
     use_container_width=True
 )
+
 st.markdown(
     """
     <h6 style='text-align: center; color: gray;'>
