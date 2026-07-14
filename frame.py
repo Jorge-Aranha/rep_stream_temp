@@ -9,7 +9,7 @@ st.set_page_config(
 st.title("Report Embargos")
 
 fig = view()
-st.pyplot(fig)
+st.pyplot(fig, use_container_width=False)
 
 df = select2()
 df2 = select3()
