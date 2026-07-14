@@ -39,10 +39,11 @@ st.dataframe(
     df,
     use_container_width=True
 )
-
-st.subheader("Coordenadas")
-
-st.dataframe(
-    df2,
-    use_container_width=True
+st.markdown(
+    """
+    <h6 style='text-align: center; color: gray;'>
+        Disponível até 14/07/2026
+    </h6>
+    """,
+    unsafe_allow_html=True
 )
