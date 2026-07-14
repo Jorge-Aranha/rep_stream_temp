@@ -55,7 +55,7 @@ def view():
         + "-01"
     )
 
-    fig, ax = plt.subplots(figsize=(12, 5))
+    fig, ax = plt.subplots(figsize=(12, 4.5))
 
     cores = {
         "NORTE": "#78BE20",
